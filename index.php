@@ -21,8 +21,12 @@ switch ($request) {
         break;
 
     case 'product':
-        $id = explode('/', $_SERVER['REQUEST_URI'])[4];
+        $id = explode('/', $_SERVER['REQUEST_URI'])[3];
         $controller = new ProductController($id);
+        break;
+
+    case 'ncis':
+        $controller = new NcisController();
         break;
 
     default:
