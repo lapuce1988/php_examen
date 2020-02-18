@@ -59,8 +59,8 @@
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
+                <form class="form-inline my-2 my-lg-0" method="post" action="examen_php/ncis">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search" name="ncis">
                     <button class="btn btn-danger my-2 my-sm-0 btn-sm" type="submit"><img src="./views/img/recherche.png"</button>
                 </form>
             </div>

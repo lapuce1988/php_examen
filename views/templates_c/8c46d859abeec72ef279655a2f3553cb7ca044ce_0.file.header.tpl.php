@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-18 14:01:42
+/* Smarty version 3.1.33, created on 2020-02-18 18:26:59
   from 'C:\wamp64\www\examen_php\views\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e4bee463e90a1_30138254',
+  'unifunc' => 'content_5e4c2c73aca444_62729889',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8c46d859abeec72ef279655a2f3553cb7ca044ce' => 
     array (
       0 => 'C:\\wamp64\\www\\examen_php\\views\\templates\\header.tpl',
-      1 => 1582031670,
+      1 => 1582050416,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4bee463e90a1_30138254 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4c2c73aca444_62729889 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
     <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 </title>
@@ -89,8 +89,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
+                <form class="form-inline my-2 my-lg-0" method="post" action="examen_php/ncis">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search" name="ncis">
                     <button class="btn btn-danger my-2 my-sm-0 btn-sm" type="submit"><img src="./views/img/recherche.png"</button>
                 </form>
             </div>

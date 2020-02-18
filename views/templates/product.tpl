@@ -1,40 +1,19 @@
 
-{*<div class="col-md-3 product_card ">*}
-{*    <div class="card">*}
-{*        <a href="product/{$product->getId()}" rel="Vous avez choisi">*}
-{*            <img src="images/products/{$product->getId()}.jpg" class="card-img-top" alt="{$product->getName()}">*}
-{*        </a>*}
-{*        <div class="card-body">*}
-{*            <h5 class="card-title">{$product->getName()}</h5>*}
-{*            <p class="card-text">{$product->getShortDescription()}</p>*}
-{*            <div class="row">*}
-{*                <div class="col-sm-6">*}
-{*                    <a href="#" class="btn btn-primary add-to-cart mx-auto"><i class="fa fa-cart"></i> Add to cart</a>*}
-{*                </div>*}
-{*                <div class="col-sm-6 price">*}
-{*                    {$product->getPrice()|number_format:2}€*}
-{*                </div>*}
-{*            </div>*}
-{*        </div>*}
-{*    </div>*}
-{*</div>*}
-<p>Test Bonjour</p>
-
 <div class="container">
     <br>
     <div class="row">
         <div class="col-md-12">
-            <h2 class="bd-title">{$product->getName()}</h2>
-            <h6 class="bd-lead">{$product->getShortDescription()}</h6>
+            <h2 class="bd-title">{$product->getName()|utf8_encode}</h2>
+            <h6 class="bd-lead">{$product->getShortDescription()|utf8_encode}</h6>
         </div>
     </div>
     <div class="row">
         <div class="col-md-4">
-            <img src="./views/img/products/{$product->getId()}.jpg" alt="{$product->getName()}">
+            <img src="./views/img/products/{$product->getId()+1}.jpg" alt="{$product->getName()|utf8_encode}">
         </div>
         <div class="col-md-5">
             <p>
-                {$product->getLongDescription()}
+                {$product->getLongDescription()|utf8_encode}
             </p>
         </div>
         <div class="col-md-3 bg-primary">
