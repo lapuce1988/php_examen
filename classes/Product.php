@@ -1,4 +1,5 @@
 <?php
+require_once ('./classes/BaseEntity.php');
 
 class Product extends BaseEntity
 {
