@@ -20,7 +20,8 @@ class ProductController extends BaseController{
 
     public static function getProducts(){
         $pdo = DB::getInstance();
-        $requete = 'SELECT * FROM product';
+        $requete="SELECT * FROM product";
+
 
         $stmt = $pdo->prepare($requete);
         $stmt->execute();
