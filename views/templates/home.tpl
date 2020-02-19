@@ -6,7 +6,7 @@
                 <li data-target="#carouselExempleIndicators" data-slide-to="1" ></li>
                 <li data-target="#carouselExempleIndicators" data-slide-to="2" ></li>
             </ol>
-            <div class="carousel-inner">
+            <div class="carousel-inner mx-auto">
                 <div class="carousel-item active">
                     <img src="./views/img/sliders/1.jpg" class="d-block w-100" alt="...">
                 </div>

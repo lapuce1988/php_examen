@@ -1,5 +1,4 @@
 <div class="row product_list ">
-
     {foreach $products as $product}
         <div class="col-md-3 product_card ">
             <div class="card">

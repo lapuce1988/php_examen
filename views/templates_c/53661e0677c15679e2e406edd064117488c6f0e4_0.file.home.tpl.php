@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-18 14:11:15
+/* Smarty version 3.1.33, created on 2020-02-18 20:00:27
   from 'C:\wamp64\www\examen_php\views\templates\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e4bf083bf1e17_08458282',
+  'unifunc' => 'content_5e4c425bed31e6_87429158',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '53661e0677c15679e2e406edd064117488c6f0e4' => 
     array (
       0 => 'C:\\wamp64\\www\\examen_php\\views\\templates\\home.tpl',
-      1 => 1582035061,
+      1 => 1582056026,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4bf083bf1e17_08458282 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4c425bed31e6_87429158 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container">
     <br>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -29,7 +29,7 @@ function content_5e4bf083bf1e17_08458282 (Smarty_Internal_Template $_smarty_tpl)
                 <li data-target="#carouselExempleIndicators" data-slide-to="1" ></li>
                 <li data-target="#carouselExempleIndicators" data-slide-to="2" ></li>
             </ol>
-            <div class="carousel-inner">
+            <div class="carousel-inner mx-auto">
                 <div class="carousel-item active">
                     <img src="./views/img/sliders/1.jpg" class="d-block w-100" alt="...">
                 </div>

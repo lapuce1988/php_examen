@@ -1,40 +1,26 @@
-
 <div class="container">
-    <br>
     <div class="row">
-        <div class="col-md-12">
-            <h2 class="bd-title">{$product->getName()|utf8_encode}</h2>
-            <h6 class="bd-lead">{$product->getShortDescription()|utf8_encode}</h6>
+        <div class="col">
+            <h2 class="bd-title text-center">{$product->getName()|utf8_encode}</h2>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4">
-            <img src="./views/img/products/{$product->getId()+1}.jpg" alt="{$product->getName()|utf8_encode}">
+        <h6 class="bd-lead">{$product->getShortDescription()|utf8_encode}</h6>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <img src="../views/img/products/{$product->getId()}.jpg" alt="{$product->getName()|utf8_encode}" class="img-thumbnail">
         </div>
-        <div class="col-md-5">
-            <p>
-                {$product->getLongDescription()|utf8_encode}
-            </p>
+        <div class="col">
+            <p>{$product->getLongDescription()|utf8_encode}</p>
+            <div class="col">
+                <h6>Quantité restante : {$product->getStock()}</h6>
+                <h4 class="text-right">Prix : {$product->getPrice()}€</h4>
+            </div>
+            <div class="col">
+                <a href="#" class="btn btn-danger add-to-cart text-right"><i class="fa fa-cart"></i><img src="../views/img/panier.png"></a>
+            </div>
         </div>
-        <div class="col-md-3 bg-primary">
-            <form>
-                <div class="row">
-                    <div class="col-md-12">
-                        <label>{$product->getPrice()}€</label><br>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8">
-                            Quantité :
-                        </div>
-                        <div class="form-group row">
-                            <label for="example-number-input" class="col-2 col-form-label">Number</label>
-                            <div class="col-4">
-                                <input class="form-control" type="number" value="42" id="example-number-input">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
+
     </div>
 </div>
