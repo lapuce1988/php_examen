@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-19 04:32:01
+/* Smarty version 3.1.33, created on 2020-02-19 05:07:37
   from 'C:\wamp64\www\examen_php\views\templates\product.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e4cba41483798_83645332',
+  'unifunc' => 'content_5e4cc299614212_84383050',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '327f32eb50fe022ec28451d6b0a5da198f2f5579' => 
     array (
       0 => 'C:\\wamp64\\www\\examen_php\\views\\templates\\product.tpl',
-      1 => 1582086721,
+      1 => 1582088857,
       2 => 'file',
     ),
   ),
@@ -20,17 +20,15 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4cba41483798_83645332 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4cc299614212_84383050 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container">
     <div class="row">
         <div class="col">
+            <br>
             <h2 class="bd-title text-center"><?php echo utf8_encode($_smarty_tpl->tpl_vars['product']->value->getName());?>
 </h2>
+            <br>
         </div>
-    </div>
-    <div class="row">
-        <h6 class="bd-lead"><?php echo utf8_encode($_smarty_tpl->tpl_vars['product']->value->getShortDescription());?>
-</h6>
     </div>
     <div class="row">
         <div class="col-4">
@@ -39,8 +37,12 @@ function content_5e4cba41483798_83645332 (Smarty_Internal_Template $_smarty_tpl)
 " class="img-thumbnail">
         </div>
         <div class="col">
+            <h6 class="bd-lead"><?php echo utf8_encode($_smarty_tpl->tpl_vars['product']->value->getShortDescription());?>
+</h6>
+            <br>
             <p><?php echo utf8_encode($_smarty_tpl->tpl_vars['product']->value->getLongDescription());?>
 </p>
+            <br>
             <div class="col">
                 <h6>Quantité restante : <?php echo $_smarty_tpl->tpl_vars['product']->value->getStock();?>
 </h6>
@@ -49,6 +51,7 @@ function content_5e4cba41483798_83645332 (Smarty_Internal_Template $_smarty_tpl)
             </div>
             <div class="col">
                 <a href="#" class="btn btn-danger add-to-cart text-right"><i class="fa fa-cart"></i><img src="../views/img/panier.png"></a>
+                <br><br>
             </div>
         </div>
 
