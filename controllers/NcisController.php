@@ -1,6 +1,5 @@
 <?php
-require_once('./controllers/BaseController.php');//sert à charger la classe parent dont on a besoin
-require_once ('./classes/Product.php');
+
 class NcisController extends BaseController{
     protected $name='ncis';
 
@@ -12,7 +11,7 @@ class NcisController extends BaseController{
             $products[] = Product::fromRow(new Product(), $row); //on crée un nouvel objet product dans lequel on vient injecter la valeur contenue dans $row
 
         }
-
+        var_dump($products);
         return $products;
     }
 
