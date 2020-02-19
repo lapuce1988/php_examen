@@ -23,11 +23,12 @@ class SmartyLoader extends Smarty
     // $title contenant le titre de la page sous forme de chaîne de caractère
     public function getHeader($assets = array("css" => array(), "js" => array()), $bootstrap = false, $title="New page")
     {
-        $assets['css'][]='./views/css/global.css';
+        $assets['css'][]=URL.'/views/css/global.css';
         $this->assign(array(
             'title' => $title,
             'assets' => $assets,
             'bootstrap' => $bootstrap,
+            'url' => URL,
         ));
         $this->display('header.tpl');
     }
