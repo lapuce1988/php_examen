@@ -1,4 +1,5 @@
 <?php
+CONST URL = 'http://localhost/examen_php';
 
 //Prend en charge les controleurs
 foreach (glob(__DIR__."/controllers/*.php") as $filename)
