@@ -1,5 +1,4 @@
 <?php
-require_once ('./classes/BaseEntity.php');
 
 class Product extends BaseEntity
 {
@@ -9,6 +8,7 @@ class Product extends BaseEntity
     protected $stock;
     protected $short_description;
     protected $long_description;
+    protected $category;
 
     public static $definition = array(
         "table" => "product",
@@ -20,8 +20,10 @@ class Product extends BaseEntity
             "stock",
             "short_description",
             "long_description",
+            "category"
         ),
     );
+
 
     /**
      * @return mixed
@@ -118,15 +120,22 @@ class Product extends BaseEntity
         $this->long_description = $long_description;
     }
 
-    public static function getBests(){
-        $db = DB::getInstance();
-        $str = $db->query('SELECT * FROM product LIMIT 4');
-        $arr = $str->fetchAll(PDO::FETCH_ASSOC);
-        foreach ($arr as $pid){
-            $bests[] = new self($pid['id']);
-        }
-        return $bests;
+    /**
+     * @return mixed
+     */
+    public function getCategory()
+    {
+        return $this->category;
     }
+
+    /**
+     * @param mixed $category
+     */
+    public function setCategory($category): void
+    {
+        $this->category = $category;
+    }
+
 
 
 }

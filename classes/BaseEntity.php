@@ -41,11 +41,10 @@ abstract class BaseEntity
         return $entities;
     }
 
-    public static function fromRow($entity, $row) {
+    public static function fromData($entity, $data) {
         foreach (static::$definition["fields"] as $field){
-            if(isset($row[$field])){
-                $entity->{$field}= $row[$field];  //{} pour utiliser la variable qui porte le nom contenu dans le str $field
-                // i.e. si $field = "image" -> $entity->image = $row["image"];
+            if(isset($data[$field])){
+                $entity->{$field}= $data[$field];
             }
         }
         return $entity;
