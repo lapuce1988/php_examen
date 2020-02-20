@@ -20,17 +20,16 @@ class ProductController extends BaseController{
 
     public static function getProducts(){
         $pdo = DB::getInstance();
-        $requete="SELECT * FROM product";
+        $req="SELECT * FROM product";
 
-
-        $stmt = $pdo->prepare($requete);
+        $stmt = $pdo->prepare($req);
         $stmt->execute();
 
-        $rows = $stmt->fetchAll();
+        $resultats = $stmt->fetchAll();
         $products = [];
 
-        foreach ($rows as $key => $row){
-            $products[] = Product::fromRow(new Product(), $row);
+        foreach ($resultats as $key => $resultat){
+            $products[] = Product::fromData(new Product(), $resultat);
         }
         return $products;
     }

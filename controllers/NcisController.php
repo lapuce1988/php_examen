@@ -1,16 +1,18 @@
 <?php
 
 class NcisController extends BaseController{
-    protected $name='ncis';
+    protected $name='Ncis';
 
     public function getTriParNom(){
-     //   $requete= "SELECT * FROM product WHERE name like"
-        $result = Db::getInstance()->query("SELECT * FROM product  WHERE name like '%" . $_POST["ncis"] . "%'")->fetchAll();
+        $pdo = DB::getInstance(); //Instance db
+        $req = "SELECT * FROM product  WHERE UPPER(name) like UPPER('%" . $_POST["ncis"] . "%')"; //recherche sql par le nom
+        $stmt = $pdo->prepare($req);
+        $stmt->execute();
+        $resultats = $stmt->fetchAll();
         $products = [];
 
-        foreach ($result as $key => $row) {
-            $products[] = Product::fromRow(new Product(), $row); //on crée un nouvel objet product dans lequel on vient injecter la valeur contenue dans $row
-
+        foreach ($resultats as $key => $resultat) {
+            $products[] = Product::fromData(new Product(), $resultat);
         }
         return $products;
     }
@@ -19,7 +21,7 @@ class NcisController extends BaseController{
     {
         return array(
             "controller" => $this->name,
-            "products" => $this->getTriParNom()    //"" = nom des variables qui seront utilisées dans le template
+            "products" => $this->getTriParNom()
 
         );
     }
