@@ -5,7 +5,7 @@
             <div class="col-md-3 product_card ">
                 <div class="card">
                     <a href="product/{$product->getId()}" rel="Vous avez choisi">
-                        <img src="./views/img/products/{$product->getId()}.jpg" class="card-img-top" alt="{$product->getName()}">
+                        <img src="{$url}/views/img/products/{$product->getId()}.jpg" class="card-img-top" alt="{$product->getName()}">
                     </a>
                     <div class="card-body">
                         <h5 class="card-title">{$product->getName()|utf8_encode}</h5>
@@ -22,7 +22,6 @@
                 </div>
             </div>
         {/foreach}
-
     </div>
-<br>
+    <br>
 </div>

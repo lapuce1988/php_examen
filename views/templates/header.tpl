@@ -31,7 +31,7 @@
     <header id="header" class="bg-light">
         {* HEADER EXAMPLE FROM BOOSTRAP DOCUMENTATION*}
         <nav class="navbar navbar-expand-lg navbar-light container" >
-            <a class="navbar-brand" href=""><img src="{$url}/views/img/logo.png" height="100px"> </a>
+            <a class="navbar-brand" href="/examen_php/"><img src="{$url}/views/img/logo.png" height="100px"> </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -41,27 +41,27 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="/examen_php/">Accueil <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Produits</a>
-                    </li>
-{*                    <li class="nav-item dropdown">*}
-{*                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">*}
-{*                            Dropdown*}
-{*                        </a>*}
-{*                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">*}
-{*                            <a class="dropdown-item" href="#">Action</a>*}
-{*                            <a class="dropdown-item" href="#">Another action</a>*}
-{*                            <div class="dropdown-divider"></div>*}
-{*                            <a class="dropdown-item" href="#">Something else here</a>*}
-{*                        </div>*}
+{*                    <li class="nav-item">*}
+{*                        <a class="nav-link" href="">Produits</a>*}
 {*                    </li>*}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Catégories
+                        </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
+                                <a class="dropdown-item" href="{$url}/category/{$category='BlogDeGaea'}" type="submit" name="BlogDeGaea">Le Blog de Gaea</a>
+                                <a class="dropdown-item" href="{$url}/category/{$category='Noob'}" type="submit" name="Noob">Noob</a>
+                                <a class="dropdown-item" href="{$url}/category/{$category='FlandersCompany'}" type="submit" name="FlandersCompany">Flander's Company</a>
+                            </div>
+                    </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        <a class="nav-link disabled" href="/examen.php/contact" tabindex="-1" aria-haspopup="true" name="contact">Contact</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0" method="post" action="ncis">
                     <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Ncis" name="ncis">
-                    <button class="btn btn-danger my-2 my-sm-0 btn-sm" type="submit"><img src="./views/img/recherche.png"></button>
+                    <button class="btn btn-danger my-2 my-sm-0 btn-sm" type="submit"><img src="{$url}/views/img/recherche.png"></button>
                 </form>
             </div>
         </nav>

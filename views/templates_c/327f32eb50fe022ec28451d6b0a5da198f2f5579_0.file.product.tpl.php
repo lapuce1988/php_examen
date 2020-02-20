@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-19 05:07:37
+/* Smarty version 3.1.33, created on 2020-02-20 07:35:29
   from 'C:\wamp64\www\examen_php\views\templates\product.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e4cc299614212_84383050',
+  'unifunc' => 'content_5e4e36c13c7754_06410381',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '327f32eb50fe022ec28451d6b0a5da198f2f5579' => 
     array (
       0 => 'C:\\wamp64\\www\\examen_php\\views\\templates\\product.tpl',
-      1 => 1582088857,
+      1 => 1582184129,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4cc299614212_84383050 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4e36c13c7754_06410381 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container">
     <div class="row">
         <div class="col">
@@ -32,7 +32,8 @@ function content_5e4cc299614212_84383050 (Smarty_Internal_Template $_smarty_tpl)
     </div>
     <div class="row">
         <div class="col-4">
-            <img src="../views/img/products/<?php echo $_smarty_tpl->tpl_vars['product']->value->getId();?>
+            <img src="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+/views/img/products/<?php echo $_smarty_tpl->tpl_vars['product']->value->getId();?>
 .jpg" alt="<?php echo utf8_encode($_smarty_tpl->tpl_vars['product']->value->getName());?>
 " class="img-thumbnail">
         </div>
@@ -50,7 +51,8 @@ function content_5e4cc299614212_84383050 (Smarty_Internal_Template $_smarty_tpl)
 €</h4>
             </div>
             <div class="col">
-                <a href="#" class="btn btn-danger add-to-cart text-right"><i class="fa fa-cart"></i><img src="../views/img/panier.png"></a>
+                <a href="#" class="btn btn-danger add-to-cart text-right"><i class="fa fa-cart"></i><img src="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+/views/img/panier.png"></a>
                 <br><br>
             </div>
         </div>

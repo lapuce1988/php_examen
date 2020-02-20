@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-20 14:51:28
-  from 'C:\wamp64\www\examen_php\views\templates\ncis.tpl' */
+/* Smarty version 3.1.33, created on 2020-02-20 15:42:30
+  from 'C:\wamp64\www\examen_php\views\templates\category.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e4e9cf0f3e027_48292265',
+  'unifunc' => 'content_5e4ea8e6067ce2_84174859',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '3e34bf98cd33f2b539b0d27e16d2898a1b82b86f' => 
+    'ca153a1794bdb37eb3fd730c7cb92da1cf664b0c' => 
     array (
-      0 => 'C:\\wamp64\\www\\examen_php\\views\\templates\\ncis.tpl',
-      1 => 1582190759,
+      0 => 'C:\\wamp64\\www\\examen_php\\views\\templates\\category.tpl',
+      1 => 1582203642,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4e9cf0f3e027_48292265 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4ea8e6067ce2_84174859 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container">
     <br>
     <div class="row product_list ">
@@ -33,7 +33,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['product']->value) {
                 <div class="card">
                     <a href="product/<?php echo $_smarty_tpl->tpl_vars['product']->value->getId();?>
 " rel="Vous avez choisi">
-                        <img src="./views/img/products/<?php echo $_smarty_tpl->tpl_vars['product']->value->getId();?>
+                        <img src="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+/views/img/products/<?php echo $_smarty_tpl->tpl_vars['product']->value->getId();?>
 .jpg" class="card-img-top" alt="<?php echo $_smarty_tpl->tpl_vars['product']->value->getName();?>
 ">
                     </a>
@@ -59,8 +60,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['product']->value) {
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-
     </div>
-<br>
+    <br>
 </div><?php }
 }

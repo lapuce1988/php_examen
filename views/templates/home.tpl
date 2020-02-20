@@ -8,13 +8,13 @@
             </ol>
             <div class="carousel-inner mx-auto">
                 <div class="carousel-item active">
-                    <img src="./views/img/sliders/1.jpg" class="d-block w-100" alt="...">
+                    <img src="{$url}/views/img/sliders/1.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="./views/img/sliders/2.jpg" class="d-block w-100" alt="...">
+                    <img src="{$url}/views/img/sliders/2.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="./views/img/sliders/3.jpg" class="d-block w-100" alt="...">
+                    <img src="{$url}/views/img/sliders/3.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -37,19 +37,18 @@
 
     <h3>BEST SELLERS</h3>
     <div class="row product_list ">
-
         {foreach $products as $product}
-            <div class="col-md-3 product_card ">
-                <div class="card">
+            <div class="col-md-3 product_card" >
+                <div class="card border-danger mb-4">
                     <a href="product/{$product->getId()}" rel="Vous avez choisi">
-                        <img src="./views/img/products/{$product->getId()}.jpg" class="card-img-top" alt="{$product->getName()}">
+                        <img src="{$url}/views/img/products/{$product->getId()}.jpg" class="card-img-top" alt="{$product->getName()}">
                     </a>
                     <div class="card-body">
                         <h5 class="card-title">{$product->getName()|utf8_encode}</h5>
-                        <p class="card-text">{$product->getShortDescription()|utf8_encode}</p>
+                        <p class="card-text m-1">{$product->getShortDescription()|utf8_encode}</p>
                         <div class="row">
                             <div class="col-sm">
-                                <a href="#" class="btn btn-danger add-to-cart mx-auto"><i class="fa fa-cart"></i><img src="./views/img/panier.png"></a>
+                                <a href="#" class="btn btn-danger add-to-cart mx-auto"><i class="fa fa-cart"></i><img src="{$url}/views/img/panier.png"></a>
                             </div>
                             <div class="col-sm-6 price mx-auto">
                                 {$product->getPrice()|number_format:2}€

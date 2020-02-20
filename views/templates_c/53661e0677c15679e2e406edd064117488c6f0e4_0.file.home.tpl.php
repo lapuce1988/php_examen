@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-18 20:00:27
+/* Smarty version 3.1.33, created on 2020-02-20 07:35:30
   from 'C:\wamp64\www\examen_php\views\templates\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e4c425bed31e6_87429158',
+  'unifunc' => 'content_5e4e36c25a22a0_20292780',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '53661e0677c15679e2e406edd064117488c6f0e4' => 
     array (
       0 => 'C:\\wamp64\\www\\examen_php\\views\\templates\\home.tpl',
-      1 => 1582056026,
+      1 => 1582184129,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4c425bed31e6_87429158 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e4e36c25a22a0_20292780 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container">
     <br>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -31,13 +31,16 @@ function content_5e4c425bed31e6_87429158 (Smarty_Internal_Template $_smarty_tpl)
             </ol>
             <div class="carousel-inner mx-auto">
                 <div class="carousel-item active">
-                    <img src="./views/img/sliders/1.jpg" class="d-block w-100" alt="...">
+                    <img src="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+/views/img/sliders/1.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="./views/img/sliders/2.jpg" class="d-block w-100" alt="...">
+                    <img src="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+/views/img/sliders/2.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="./views/img/sliders/3.jpg" class="d-block w-100" alt="...">
+                    <img src="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+/views/img/sliders/3.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -60,28 +63,29 @@ function content_5e4c425bed31e6_87429158 (Smarty_Internal_Template $_smarty_tpl)
 
     <h3>BEST SELLERS</h3>
     <div class="row product_list ">
-
         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['products']->value, 'product');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['product']->value) {
 ?>
-            <div class="col-md-3 product_card ">
-                <div class="card">
+            <div class="col-md-3 product_card" >
+                <div class="card border-danger mb-4">
                     <a href="product/<?php echo $_smarty_tpl->tpl_vars['product']->value->getId();?>
 " rel="Vous avez choisi">
-                        <img src="./views/img/products/<?php echo $_smarty_tpl->tpl_vars['product']->value->getId();?>
+                        <img src="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+/views/img/products/<?php echo $_smarty_tpl->tpl_vars['product']->value->getId();?>
 .jpg" class="card-img-top" alt="<?php echo $_smarty_tpl->tpl_vars['product']->value->getName();?>
 ">
                     </a>
                     <div class="card-body">
                         <h5 class="card-title"><?php echo utf8_encode($_smarty_tpl->tpl_vars['product']->value->getName());?>
 </h5>
-                        <p class="card-text"><?php echo utf8_encode($_smarty_tpl->tpl_vars['product']->value->getShortDescription());?>
+                        <p class="card-text m-1"><?php echo utf8_encode($_smarty_tpl->tpl_vars['product']->value->getShortDescription());?>
 </p>
                         <div class="row">
                             <div class="col-sm">
-                                <a href="#" class="btn btn-danger add-to-cart mx-auto"><i class="fa fa-cart"></i><img src="./views/img/panier.png"></a>
+                                <a href="#" class="btn btn-danger add-to-cart mx-auto"><i class="fa fa-cart"></i><img src="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+/views/img/panier.png"></a>
                             </div>
                             <div class="col-sm-6 price mx-auto">
                                 <?php echo number_format($_smarty_tpl->tpl_vars['product']->value->getPrice(),2);?>
