@@ -18,6 +18,9 @@ class ProductController extends BaseController{
         );
     }
 
+    public function getProduct($id){
+        return new Product($id);
+    }
     public static function getProducts(){
         $pdo = DB::getInstance();
         $req="SELECT * FROM product";

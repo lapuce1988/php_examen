@@ -5,7 +5,7 @@ class NcisController extends BaseController{
 
     public function getTriParNom(){
         $pdo = DB::getInstance(); //Instance db
-        $req = "SELECT * FROM product  WHERE UPPER(name) like UPPER('%" . $_POST["ncis"] . "%')"; //recherche sql par le nom
+        $req = "SELECT * FROM product  WHERE UPPER(name) like UPPER('%" . $_POST["ncis"] . "%')";
         $stmt = $pdo->prepare($req);
         $stmt->execute();
         $resultats = $stmt->fetchAll();

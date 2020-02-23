@@ -17,6 +17,10 @@ abstract class BaseController
         $this->renderView();
     }
 
+    public function getCategories()
+    {
+        return Category::getCategories();
+    }
 
     /**
      * Cette méthode gère la logique permettant l'affichage de la vue associée à ce controller.

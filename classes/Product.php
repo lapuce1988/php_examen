@@ -10,6 +10,14 @@ class Product extends BaseEntity
     protected $long_description;
     protected $category;
 
+//    /**
+//     * @return mixed
+//     */
+//    public function getNumCategory()
+//    {
+//        return $this->category;
+//    }
+
     public static $definition = array(
         "table" => "product",
         "primary" => "id",
@@ -25,6 +33,7 @@ class Product extends BaseEntity
     );
 
 
+
     /**
      * @return mixed
      */
@@ -33,13 +42,13 @@ class Product extends BaseEntity
         return $this->id;
     }
 
-    /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
+//    /**
+//     * @param mixed $id
+//     */
+//    public function setId($id)
+//    {
+//        $this->id = $id;
+//    }
     /**
      * @return mixed
      */
@@ -119,23 +128,6 @@ class Product extends BaseEntity
     {
         $this->long_description = $long_description;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getCategory()
-    {
-        return $this->category;
-    }
-
-    /**
-     * @param mixed $category
-     */
-    public function setCategory($category): void
-    {
-        $this->category = $category;
-    }
-
 
 
 }

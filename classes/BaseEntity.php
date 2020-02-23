@@ -32,7 +32,7 @@ abstract class BaseEntity
      */
     public static function getEntities($limit = 100)
     {
-        $ids = Db::getInstance()->query("SELECT id FROM panier.".static::$definition['table']." LIMIT $limit")->fetchAll(PDO::FETCH_COLUMN);
+        $ids = Db::getInstance()->query("SELECT id FROM .".static::$definition['table']." LIMIT $limit")->fetchAll(PDO::FETCH_COLUMN);
         $entities = array();
         foreach ($ids as $id)
         {
@@ -40,6 +40,18 @@ abstract class BaseEntity
         }
         return $entities;
     }
+
+    public static function getCategory($id){
+        $pdo = DB::getInstance();
+        $req = 'SELECT * FROM product WHERE id_category = '.$id;
+        $stmt = $pdo->query($req);
+        $resultats = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($resultats as $resultat){
+            $products[] = new static($resultat);
+        }
+        return $products;
+    }
+
 
     public static function fromData($entity, $data) {
         foreach (static::$definition["fields"] as $field){
