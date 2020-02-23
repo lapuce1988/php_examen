@@ -30,6 +30,14 @@ switch ($request) {
         $controller = new NcisController();
         break;
 
+    case 'contact':
+        $controller = new ContactController();
+        break;
+
+    case (preg_match('/category\?id=*/', $request) ? true : false) :
+        $controller = new CategoryController();
+        break;
+
     default:
         http_response_code(404);
         echo '404';

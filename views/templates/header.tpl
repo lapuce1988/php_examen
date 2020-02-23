@@ -44,19 +44,21 @@
 {*                    <li class="nav-item">*}
 {*                        <a class="nav-link" href="">Produits</a>*}
 {*                    </li>*}
+
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Catégories
+                            Categories
                         </a>
-
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
-                                <a class="dropdown-item" href="{$url}/category/{$category='BlogDeGaea'}" type="submit" name="BlogDeGaea">Le Blog de Gaea</a>
-                                <a class="dropdown-item" href="{$url}/category/{$category='Noob'}" type="submit" name="Noob">Noob</a>
-                                <a class="dropdown-item" href="{$url}/category/{$category='FlandersCompany'}" type="submit" name="FlandersCompany">Flander's Company</a>
-                            </div>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/examen_php/category?id=1">Blog de Gaea</a>
+                                <a class="dropdown-item" href="/examen_php/category?id=2">Noob</a>
+                                <a class="dropdown-item" href="/examen_php/category?id=3">Flander's Company</a>
+                        </div>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="/examen.php/contact" tabindex="-1" aria-haspopup="true" name="contact">Contact</a>
+                        <a class="nav-link btn" href="contact" tabindex="-1" aria-haspopup="true" name="contact">Contact</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0" method="post" action="ncis">

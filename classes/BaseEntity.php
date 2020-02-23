@@ -41,16 +41,6 @@ abstract class BaseEntity
         return $entities;
     }
 
-    public static function getCategory($id){
-        $pdo = DB::getInstance();
-        $req = 'SELECT * FROM product WHERE id_category = '.$id;
-        $stmt = $pdo->query($req);
-        $resultats = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        foreach ($resultats as $resultat){
-            $products[] = new static($resultat);
-        }
-        return $products;
-    }
 
 
     public static function fromData($entity, $data) {

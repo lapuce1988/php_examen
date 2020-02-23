@@ -1,11 +1,11 @@
 <div class="container">
     <br>
     <div class="row product_list ">
-        {foreach $products as $product}
+        {foreach from=$products item=foo}
             <div class="col-md-3 product_card ">
                 <div class="card">
-                    <a href="product/{$product->getId()}" rel="Vous avez choisi">
-                        <img src="{$url}/views/img/products/{$product->getId()}.jpg" class="card-img-top" alt="{$product->getName()}">
+                    <a href="product/{$product->getId()}" rel="categorie choisi">
+                        <img src="./views/img/products/{$product->getId()}.jpg" class="card-img-top" alt="{$product->getName()}">
                     </a>
                     <div class="card-body">
                         <h5 class="card-title">{$product->getName()|utf8_encode}</h5>
@@ -22,6 +22,7 @@
                 </div>
             </div>
         {/foreach}
+
     </div>
     <br>
 </div>

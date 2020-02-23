@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-02-20 16:24:14
+/* Smarty version 3.1.33, created on 2020-02-23 21:07:50
   from 'C:\wamp64\www\examen_php\views\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5e4eb2ae553821_97381068',
+  'unifunc' => 'content_5e52e9a690d787_64423438',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8c46d859abeec72ef279655a2f3553cb7ca044ce' => 
     array (
       0 => 'C:\\wamp64\\www\\examen_php\\views\\templates\\header.tpl',
-      1 => 1582215850,
+      1 => 1582490846,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e4eb2ae553821_97381068 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e52e9a690d787_64423438 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
     <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 </title>
@@ -83,22 +83,21 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     <li class="nav-item active">
                         <a class="nav-link" href="/examen_php/">Accueil <span class="sr-only">(current)</span></a>
                     </li>
+
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Catégories
+                            Categories
                         </a>
-
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
-                                <a class="dropdown-item" href="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
-/category/<?php $_smarty_tpl->_assignInScope('category', 'BlogDeGaea');?>" type="submit" name="BlogDeGaea">Le Blog de Gaea</a>
-                                <a class="dropdown-item" href="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
-/category/<?php $_smarty_tpl->_assignInScope('category', 'Noob');?>" type="submit" name="Noob">Noob</a>
-                                <a class="dropdown-item" href="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
-/category/<?php $_smarty_tpl->_assignInScope('category', 'FlandersCompany');?>" type="submit" name="FlandersCompany">Flander's Company</a>
-                            </div>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/examen_php/category?id=1">Blog de Gaea</a>
+                                <a class="dropdown-item" href="/examen_php/category?id=2">Noob</a>
+                                <a class="dropdown-item" href="/examen_php/category?id=3">Flander's Company</a>
+                        </div>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="/examen.php/contact" tabindex="-1" aria-haspopup="true" name="contact">Contact</a>
+                        <a class="nav-link btn" href="contact" tabindex="-1" aria-haspopup="true" name="contact">Contact</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0" method="post" action="ncis">

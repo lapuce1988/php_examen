@@ -21,7 +21,7 @@ class NcisController extends BaseController{
     {
         return array(
             "controller" => $this->name,
-            "products" => $this->getTriParNom()
+            "category" => $this->getTriParNom()
 
         );
     }
